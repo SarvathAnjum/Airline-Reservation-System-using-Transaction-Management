@@ -4,11 +4,11 @@ It is implemented using HTML, CSS and Python Flask.
 It makes use of File Systems(.csv files) as backend.
 
 Prerequisites:
-1) Python latest version 
+1) Python latest version installed
 2) Flask installed (run "pip install flask" in cmd)
 
 
-Steps to run this project
+Steps to run this project:
 1)save the files and folders uploaded here to a location in your laptop / desktop.
 2)open cmd and run the following command
   i)cd "path of your location where the files are stored"
