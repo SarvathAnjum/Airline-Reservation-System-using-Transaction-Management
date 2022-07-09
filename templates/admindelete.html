@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-image: url(static/images/bg7.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+
+            h1 {
+                text-align: center;
+                font-family: cursive;
+                color: aqua;
+                background-color: rgba(19, 26, 30, 0.5);
+            }
+            ul {
+                    list-style-type: none;
+                    margin: 0;
+                    text-align: center;
+                    overflow: hidden;
+                    width: 100%;
+                    padding-left: 400px;
+                    padding-top: 40px;
+                  
+                   
+                }
+
+                li {
+                float: left;
+                font-size: 30px;
+                background-color: rgba(178, 227, 248, 0.5);
+                border: 1.5px solid black;
+                }
+
+                li a {
+                display: block;
+                color: black;
+                text-align: center;
+                padding-left: 60PX;
+                padding-right: 80px;
+                text-decoration: none;
+                }
+
+                li a:hover:not(.active) {
+                background-color:bisque;
+                }
+
+                label {
+                   
+                    font-size: 25px;
+                    font-weight: bold;
+                   color: aqua;
+                   padding-left: 400px;
+                  
+                   
+                }
+                p {
+                    background-color: rgba(19, 26, 30, 0.5);
+                }
+                table{
+          background-color: black;
+          border:5px solid rgb(255, 255, 255);
+          border-collapse: collapse;
+          width:50%;
+         
+        }
+        th, td ,tr{
+            font-size: 30px;
+          padding: 15px;
+          text-align: left;
+          color:rgb(255, 255, 255);
+        }
+        th{
+          text-align:left;
+        }
+
+        </style>
+        <body>
+            
+            <h1 style="font-size: 60px;font-weight: bold;"><img src='static/images/adminn.png' width = "120px" height=" 100px" />  Welcome Administrator!</h1>
+            
+              <form action="/delete" method="POST">
+                    
+                    <p><label>Enter the passenger account ID to be deleted</label>
+                    <a name="delete"></a><input type="text" name="deleteadmin"><input type="submit" name="delete"></p>
+                    <br><br><br>  <br><br><br>  <br><br><br>  <br><br><br>  <br><br><br>  <br><br><br> 
+                     <h1>
+                    {%if message%}
+                    {{message}}
+                    {%endif%}
+                </h1> 
+                    <br><br><br>  <br><br><br>  <br><br><br>    <br><br><br>  <br><br><br>  <br><br><br> 
+                    -->
+                  </form>
+
+              
+
+        </body>
+    </head>
+</html>

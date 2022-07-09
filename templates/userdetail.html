@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UserDetails</title>
+   <script>
+function validate(){
+        var account=document.book.account;
+        var fname=document.book.fname;
+        var lname=document.book.lname;
+        var departure=document.book.departure;
+        var arrival=document.book.arrival;
+        var dept=document.book.dept;
+        var destiny=document.book.destiny;
+        var seattype=document.book.seattype;
+        var phone=document.book.phone;
+        var price=document.book.price;
+      
+
+        if(account.value.length<=0)
+        {
+            alert('Account ID is required');
+                    fname.focus();
+                    return false;
+        }
+        
+        if (fname.value.length <= 0) {
+                    alert('First Name is required');
+                    fname.focus();
+                    return false;
+                }
+        if (lname.value.length <= 0) {
+                    alert('Last Name is required');
+                    lname.focus();
+                    return false;
+                }       
+        if (departure.value.length <= 0) {
+                    alert('Departure date is required');
+                    departure.focus();
+                    return false;
+                } 
+        if (arrival.value.length <= 0) {
+                    alert('Arrival date is required');
+                    arrival.focus();
+                    return false;
+                }
+        if (dept.value=="Departure from") {
+                    alert('Departure place is required');
+                    dept.focus();
+                    return false;
+                }
+        if (destiny.value=="Destination") {
+                    alert('Destination date is required');
+                    destiny.focus();
+                    return false;
+                }
+        if (seattype.value=="Seat Type") {
+                    alert('Seat Type is required');
+                    seattype.focus();
+                    return false;
+                }
+        if (phone.value.length <= 0) {
+                    alert('Phone Number is required');
+                    phone.focus();
+                    return false;
+                }
+        if (price.value.length<=0) {
+                    alert('Price is required');
+                    price.focus();
+                    return false;
+                }
+    alert('Submitted successfully')
+    }
+
+  
+   </script>
+<style>
+    form{
+        font-size: 27px;
+    }
+    input{
+        width:300px;
+        height: 30px;
+    }
+
+    select{
+        width: 250px;
+        height: 30px;
+    }
+    .btn {
+  background: #1b5175;
+  background-image: -webkit-linear-gradient(top, #1b5175, #85b7d6);
+  background-image: -moz-linear-gradient(top, #1b5175, #85b7d6);
+  background-image: -ms-linear-gradient(top, #1b5175, #85b7d6);
+  background-image: -o-linear-gradient(top, #1b5175, #85b7d6);
+  background-image: linear-gradient(to bottom, #1b5175, #85b7d6);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Georgia;
+  color: #000000;
+  font-size: 35px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #189df0;
+  background-image: -webkit-linear-gradient(top, #189df0, #3498db);
+  background-image: -moz-linear-gradient(top, #189df0, #3498db);
+  background-image: -ms-linear-gradient(top, #189df0, #3498db);
+  background-image: -o-linear-gradient(top, #189df0, #3498db);
+  background-image: linear-gradient(to bottom, #189df0, #3498db);
+  text-decoration: none;
+}
+</style>
+</head>
+    <body style="background-image: url('static/images/airline222.jpg');">
+        
+    <div class="bg-img">
+    <h1 style="text-align:center;color:darkslateblue;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: bold;">BOOK A FLIGHT</h1>
+    <hr>
+    <center>    <form action="/admin" method="POST" name="book" onsubmit="return validate()">
+    <h2 style="color:black;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">User Details</h2>
+    <table style="font-family:Arial, Helvetica, sans-serif;">
+        
+
+        <tr>
+            <td><label>Account ID</label></td>
+            <td>
+                <input type="text" name="account" placeholder="Account ID">
+            </td>
+        </tr>
+        <tr>
+            <td><label>First Name: </label></td>
+            <td>
+                <input type="text" name="fname" placeholder="First Name">
+            </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td><label>Last Name: </label></td>
+            <td>
+                <input type="text" name="lname" placeholder="Last Name">
+            </td>
+        </tr>
+        <tr>
+            <td><label >Departure Date:</label></td>
+            <td>
+                <input type="date" id="departure" name="departure" placeholder="dd-mm-yyyy">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Arrival Date:</label></td>
+            <td>
+                <input type="date" id="arrival" name="arrival" placeholder="dd-mm-yyyy">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Departuring from:</label></td>
+            <td>
+                <select name="dept">
+                    <option value="depts">Departure from</option>
+                    <option value="bangalore">Bangalore</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="chennai">Chennai</option>
+                    <option value="kolkata">Kolkata</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Destination:</label></td>
+            <td>
+               <select name="destiny">
+                    <option value="destiny">Destination</option>
+                    <option value="bangalore">Bangalore</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="chennai">Chennai</option>
+                    <option value="kolkata">Kolkata</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Seat Type: </label></td>
+            <td>
+                <select name="seattype">
+                    <option value="seattype">Seat Type</option>
+                    <option value="economy">Economy</option>
+                    <option value="executive">Executive</option>
+                    <option value="first">First</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="phone">Phone number:</label></td>
+            <td>
+                <input type="phone" id="phone" name="phone" placeholder="Phone Number">
+            </td>
+            <br>
+        </tr>
+        <tr>
+            <td><label>Ticket Price: </label></td>
+            <td>
+                    <input type="number" name="price" placeholder="Price">
+            
+                
+            </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td></td>
+            <td><button class="btn" type="submit" name="submit">SUBMIT</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</center>
+</div>
+</body>
+</html>
+
+
+
